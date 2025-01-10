@@ -1,0 +1,283 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 400px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.hero-section h1 {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #ffc107;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 0;
+    background-color: #1a1a1a !important;
+}
+
+.navbar-brand {
+    font-family: 'Buckin', sans-serif;
+    font-size: 1 rem;
+    font-style: bold;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+}
+
+/* Navigation items styling */
+.navbar-nav .nav-item {
+    position: relative;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation dots - moved outside the hover area */
+.navbar-nav .nav-item:not(:last-child)::after {
+    content: "•";
+    position: relative;
+    margin: 0 0.5rem;
+    color: #ffc107;
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+/* Nav links styling */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    background-color: #ffc107;
+    color: #000 !important;
+}
+
+/* Active state */
+.navbar-nav .nav-link.active {
+    background-color: #ffc107;
+    color: #000 !important;
+    border-radius: 20px;
+}
+
+/* Social icons in header */
+.navbar .social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.navbar .social-icons a {
+    color: #fff;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .social-icons a:hover {
+    color: #ffc107;
+}
+
+/* Fleet Cards */
+.fleet-card {
+    border: none;
+    background: transparent;
+    margin-bottom: 2rem;
+}
+
+.fleet-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.fleet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fleet-card:hover .fleet-image img {
+    transform: scale(1.05);
+}
+
+.fleet-content {
+    padding: 1.5rem 0;
+}
+
+.fleet-content h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.fleet-content p {
+    color: #888;
+    line-height: 1.8;
+}
+
+/* Update the book now button styles */
+.btn-warning {
+    background: transparent;
+    border: 2px solid #ffc107;
+    color: #ffc107;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.6rem 2rem;
+    border-radius: 3px;
+}
+
+.btn-warning:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+/* Footer Styles */
+footer {
+    background: #1a1a1a;
+    padding: 4rem 0 2rem;
+}
+
+footer h5 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+footer a:hover {
+    color: #fff !important;
+}
+
+footer .social-icons {
+    margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/* Copyright text */
+footer small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Update footer link colors */
+footer a.text-warning {
+    color: #ffc107 !important;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+}
+
+footer a.text-warning:hover {
+    color: #fff !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .fleet-image {
+        height: 200px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Header Social Icons */
+.header-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-social-icons a {
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.header-social-icons a:hover {
+    color: #ffc107;
+}
+
+/* Add this to the media query section */
+@media (max-width: 991px) {
+    .header-social-icons {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    height: 40px;
+    /* Adjust height as needed */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Responsive logo size */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 35px;
+        /* Slightly smaller on mobile */
+    }
+}
+
+/* Font Face Declaration */
+@font-face {
+    font-family: 'Buckin';
+    src: url('../fonts/Buckin-Regular.woff2') format('woff2'),
+        url('../fonts/Buckin-Regular.woff') format('woff'),
+        url('../fonts/Buckin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply font to hero section title */
+.hero-section h1 {
+    font-family: 'Buckin', sans-serif;
+    position: relative;
+    font-size: 4rem;
+    font-weight: normal;
+    color: #ffc107;
+}
